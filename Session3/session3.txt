@@ -1,0 +1,27 @@
+sudo useradd -m -d home/osc/ osc (add a new user with home directory)
+sudo chsh -s /bin/bash osc (change sh to bash )
+sudo usermod -c "OSC" osc (set name for user)
+sudo passwd osc
+sudo groupadd osc_group
+sudo usermod -aG osc_group osc
+sudo usermod -aG sudo osc or sudo visudo (write osc ALL = (ALL) ALL  ctrl x then y)
+su osc 
+mkdir permission_practice
+cd permission_practice
+touch public_file.txt
+chmod a+rw public_file.txt
+ls -l
+touch private_file.txt
+chmod 600 private_file.txt
+ls -l
+sudo chown emanali private_file.txt
+sudo chgrp osc_group private_file.txt
+sleep 1000 &
+ps
+kill 2576
+vim & 
+ps
+killall vim
+ps
+sudo apt install neofetch
+sudo apt remove neofetch
